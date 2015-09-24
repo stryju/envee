@@ -1,15 +1,15 @@
 {
   "name": "envee",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "better ENV variables handling",
   "main": "index.js",
   "scripts": {
-    "build": "babel index.es6 --out-file index.js",
+    "build": "babel index.es6 | uglifyjs --compress --mangle > index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/stryju/envee.git"
+    "url": "git@github.com/stryju/envee.git"
   },
   "keywords": [
     "env"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/stryju/envee#readme",
   "devDependencies": {
-    "babel": "^5.8.23"
+    "babel": "^5.8.23",
+    "uglifyjs": "^2.4.10"
   }
 }
